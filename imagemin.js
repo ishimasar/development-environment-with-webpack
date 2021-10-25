@@ -1,11 +1,15 @@
 const imagemin = require('imagemin-keep-folder');
+const imageminWebp = require('imagemin-webp');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-pngquant');
 const imageminGifsicle = require('imagemin-gifsicle');
 const imageminSvgo = require('imagemin-svgo');
 
-imagemin(['src/img/*.{jpg,png,gif,svg,webp,ico}'], {
+imagemin(['src/img/*.{webp,jpg,png,gif,svg,ico}'], {
   plugins: [
+    imageminWebp({
+      quality: 80,
+    }),
     imageminMozjpeg({
       quality: 85,
     }),
