@@ -110,6 +110,8 @@
     "tslint": "tslint --project tsconfig.json",
     "tslint-fix": "tslint --fix --project tsconfig.json",
     "img:clean": "rimraf ./dest/assets/img/*",
+    "img-src:clean": "rimraf ./src/img/*",
+    "img-all:clean": "rimraf ./dest/assets/img/* ./src/img/*",
     "imgmin": "node imagemin.js",
     "format": "prettier-stylelint --quiet --write src/scss/style.scss"
   },
